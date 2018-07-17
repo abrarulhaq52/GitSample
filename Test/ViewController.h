@@ -1,15 +1,23 @@
 //
 //  ViewController.h
-//  Test
+//  Quanfab Test
 //
-//  Created by Ilmasoft on 16/07/2018.
+//  Created by Abrar on 17/07/2018.
 //  Copyright © 2018 Ilmasoft. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource, UISearchBarDelegate>
+{
+    NSArray * list;
+    NSArray * DataList;
+    IBOutlet UIView * MainView;
+    NSMutableArray * ValueList, * DataToDisplay, *searchByTitle;    
+}
+@property (weak, nonatomic) IBOutlet UILabel *authorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
